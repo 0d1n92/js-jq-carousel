@@ -5,11 +5,13 @@
     <title>Carousel</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/carousel.js"></script>
   </head>
   <body>
       <div class="carousel_container">
         <div class="carousel">
-          <span class="btn_next"><i class="fas fa-chevron-left"></i></span>
+          <a class="btn_prev"><i class="fas fa-chevron-left"></i></a>
           <div class="container_slider">
             <ul class="carousel_img">
               <li class="first active"><img src="img/Stradic_FL_1250x1250px_V1.jpg" alt="stradic"> </li>
@@ -19,14 +21,14 @@
               <li class="last"><img src="img/Fliegen_XD_1250x1250px_V1.jpg" alt="Shimano Filigen"> </li>
             </ul>
             <ul class="dots">
+              <li class="active first"></li>
               <li></li>
               <li></li>
               <li></li>
-              <li></li>
-              <li></li>
+              <li class="last"></li>
             </ul>
           </div>
-          <span class="btn_prev"><i class="fas fa-chevron-right"></i></span>
+          <a class="btn_next"><i class="fas fa-chevron-right"></i></a>
         </div>
       </div>
 

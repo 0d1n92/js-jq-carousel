@@ -5,9 +5,6 @@
   padding: 0;
 }
 /****RESET-CLOSE****/
-.active{
-  display: block!important;
-}
 
 .carousel_container{
 display: flex;
@@ -46,6 +43,10 @@ ul.carousel_img li img {
   height: 100%;
   vertical-align: middle;
 }
+ul.carousel_img li.active{
+  display: block;
+}
+
 ul.dots {
     position: relative;
     padding-left: 0;
@@ -60,7 +61,7 @@ ul.dots li::after {
     font-weight: 900;
     font-size: 24px;
 }
-ul.dots .active {
+ul.dots .active::after {
     content: "\25CF"!important;
 }
 
