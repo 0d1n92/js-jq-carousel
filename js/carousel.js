@@ -12,12 +12,8 @@ $(document).ready(function() {
    //change image at press key arrow
    $(document).keydown(function(e){
      if(e.which==39 || e.keycode==39){
-       var imgActive=$('.carousel_img > li.active');
-       var dotActive=$('.dots> li.active');
        nextSlider(imgActive,dotActive);
      } else if (e.which==37 || e.keycode==37) {
-       var imgActive=$('.carousel_img > li.active');
-       var dotActive=$('.dots> li.active');
         prevSlider(imgActive, dotActive);
      }
     });
