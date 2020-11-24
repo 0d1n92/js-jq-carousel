@@ -1,15 +1,15 @@
 $(document).ready(function() {
+   //change image at click btn
+   $('.btn_next, .carousel_img> li').click(function(){
+     nextSlider();
 
-   $('.btn_next').click(function(){
-    var imgActive=$('.carousel_img > li.active');
-    var dotActive=$('.dots> li.active');
-     nextSlider(imgActive,dotActive);
    });
    $('.btn_prev').click(function(){
-    var imgActive=$('.carousel_img > li.active');
-    var dotActive=$('.dots> li.active');
-     prevSlider(imgActive, dotActive);
+     console.log("test");
+     prevSlider();
    });
+    //change image at click dots;
+   //change image at press key arrow
    $(document).keydown(function(e){
      if(e.which==39 || e.keycode==39){
        var imgActive=$('.carousel_img > li.active');
@@ -20,13 +20,22 @@ $(document).ready(function() {
        var dotActive=$('.dots> li.active');
         prevSlider(imgActive, dotActive);
      }
-     var press=e.which;
-      console.log(press);
     });
+
+        $('.dots> li').click( function(){
+          // var test
+        $('.carousel_img > li.active, .dots > li').removeClass('active');
+        $('.carousel_img > li').eq($(this).index()).addClass('active');
+        $('.dots > li').eq($(this).index()).addClass('active');
+
+        });
+
   });
 
-
-function nextSlider(imgNow,dotNow) {
+//event to click btn right
+function nextSlider() {
+  var imgNow=$('.carousel_img > li.active');
+  var dotNow=$('.dots> li.active');
    if(imgNow.hasClass('last')){
     imgNow.removeClass('active');
     dotNow.removeClass('active');
@@ -41,8 +50,10 @@ function nextSlider(imgNow,dotNow) {
   }
 
 }
-
-function prevSlider(imgNow,dotNow){
+//event to click btn left
+function prevSlider(){
+  var imgNow=$('.carousel_img > li.active');
+  var dotNow=$('.dots> li.active');
   if(imgNow.hasClass('first')){
    imgNow.removeClass('active');
    dotNow.removeClass('active');
