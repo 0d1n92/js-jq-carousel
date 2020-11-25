@@ -19,10 +19,10 @@ $(document).ready(function() {
 
     });
     //change image at click dots
+
     $('.dots> li').click( function(){
 
-      dotsSliderClick($(this))
-
+      dotsSliderClick(this);
     });
 
   });
@@ -62,6 +62,6 @@ function dotsSliderClick(element){
 
   $('.carousel_img > li.active, .dots > li').removeClass('active');
   $('.carousel_img > li').eq($(element).index()).addClass('active');
-  $('.dots > li').eq($(element).index()).addClass('active');
+  $(element).addClass('active');
 
 }
